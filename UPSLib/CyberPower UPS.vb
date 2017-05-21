@@ -4,12 +4,6 @@
 
         Protected Overrides Sub InterpretReport(ByVal Code() As Byte)
             If Code Is Nothing OrElse Code.Length < 1 Then Return
-            Console.Write("DEBUG: ")
-
-            For X As Integer = 0 To Code.Length - 1
-                Console.Write(Code(X).ToString("X") + " ")
-            Next
-            Console.WriteLine("")
 
             Select Case Code(0)
                 Case &H8
